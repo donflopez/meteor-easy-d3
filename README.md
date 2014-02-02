@@ -5,7 +5,13 @@ Create easy d3 graphs with a helper
 
 ###How to use
 
-`{{#d3bar name='name-here' data=dataArray}}{{/d3bar}}`
+**Important** use d3bar helper between {{#constant}}.
+
+````
+{{#constant}}
+  {{#d3bar name='name-here' data=dataArray}}{{/d3bar}}
+{{/constant}}
+````
 
 1. Variables:
 
