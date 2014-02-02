@@ -61,23 +61,22 @@ function bar(opts){
         .call(this.d3b.xAxis);
     }
 
+    //Setting keys
     var keys = _.map(opts.data, function(data, key){
-      return key;
+      return data.key;
     });
     this.d3b.color.domain(keys);
 
-    // Get the players
-    var data = _.map(opts.data, function(data, key){
-      return {date:key, size:data.length};
-    });
+    // setting data
+    var data = opts.data;
 
     this.d3b.x.domain(keys);
     this.d3b.y.domain([0, d3.max(data, function(d) { return d.size; })]);
 
     var bar_selector = this.d3b.svg.selectAll(".bar")
-      .data(data, function (d) {return d.date});
+      .data(data, function (d) {return d.key});
     var text_selector = this.d3b.svg.selectAll(".bar_text")
-      .data(data, function (d) {return d.date});
+      .data(data, function (d) {return d.key});
     this.d3b.svg.selectAll('.x').call(this.d3b.xAxis);
     var that = this;
 
@@ -87,11 +86,11 @@ function bar(opts){
     bar_selector
       .transition()
       .duration(100)
-      .attr("x", function(d) { return that.d3b.x(d.date);})
+      .attr("x", function(d) { return that.d3b.x(d.key);})
       .attr("width", that.d3b.x.rangeBand())
       .attr("y", function(d) { return that.d3b.y(d.size); })
       .attr("height", function(d) { return that.d3b.height - that.d3b.y(d.size); })
-      .style("fill", function(d) { return that.d3b.color(d.date);});
+      .style("fill", function(d) { return that.d3b.color(d.key);});
 
     text_selector
       .enter().append("text")
@@ -100,7 +99,7 @@ function bar(opts){
       .transition()
       .duration(100)
       .attr()
-      .attr("x", function(d) { return that.d3b.x(d.date);})
+      .attr("x", function(d) { return that.d3b.x(d.key);})
       .attr('font-size', '14px')
       .attr("y", function(d) { return that.d3b.y(d.size) - 2; })
       .text(function(d) {return d.size;})
