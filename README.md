@@ -9,7 +9,7 @@ Create easy d3 graphs with a helper
 
 1. Variables:
 
-The helper have two variables.
+  The helper have two variables.
 
   * name: The name of the graph.
   * data: an array with an especific formatting.
