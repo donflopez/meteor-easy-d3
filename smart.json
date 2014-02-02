@@ -4,6 +4,6 @@
   "homepage": "https://github.com/donflopez/meteor-easy-d3",
   "author": "Francisco López<donflopez@gmail.com> (http://about.me/donflopez)",
   "version": "0.1.0",
-  "git": "git@github.com:donflopez/meteor-easy-d3.git",
+  "git": "https://github.com/donflopez/meteor-easy-d3.git",
   "packages": {}
 }
