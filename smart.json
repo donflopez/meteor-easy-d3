@@ -1,9 +1,9 @@
 {
   "name": "easy-d3",
   "description": "Create easy d3 graphs with a helper",
-  "homepage": "",
+  "homepage": "https://github.com/donflopez/meteor-easy-d3",
   "author": "Francisco López<donflopez@gmail.com> (http://about.me/donflopez)",
-  "version": "0.0.1",
-  "git": "",
+  "version": "0.1.0",
+  "git": "git@github.com:donflopez/meteor-easy-d3.git",
   "packages": {}
 }
