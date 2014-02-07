@@ -1,6 +1,8 @@
 meteor-easy-d3
 ==============
 
+![Graph example](https://pbs.twimg.com/media/Bf20opsCYAAVoF-.jpg)
+
 Create easy d3 graphs with a helper
 
 ###How to use
